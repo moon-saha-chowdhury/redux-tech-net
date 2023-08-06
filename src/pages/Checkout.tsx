@@ -8,13 +8,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { IProduct } from '@/types/globalTypes';
 
 import { useState } from 'react';
+import { useAppSelector } from '../redux/hook';
 
 export default function Checkout() {
   const [scheduled, setScheduled] = useState<boolean>(false);
+  const {products} = useAppSelector(state => state.cart)
 
   //! Dummy Data
-
-  const products: IProduct[] = [];
+  // ! const products: IProduct[] = [];
 
   //! **
 
